@@ -1,3 +1,5 @@
+var  buttonId = document.getElementById("button");
+
 function button() {
     const char = 
     "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz@#$%^&*()_+><[]{}'"
@@ -9,10 +11,12 @@ function button() {
         let randomNumber = Math.floor(Math.random()
         * char.length);
 
-        textd += char.substring(randomNumber,
+        text += char.substring(randomNumber,
         randomNumber + 1);
         console.log(text);
     }
-    document.getElementById('text').value = text;
+    document.getElementById("text-input").value = text;
 
 }
+
+buttonId.addEventListener("click", button);
